@@ -11,7 +11,7 @@ describe('PesquisarProduto', () => {
         cy.get('div.close-button').click()
         cy.get('[href="https://www.giulianaflores.com.br/orquidea-azul/p27330/?src=DEPT"] > .title-item').click()
         cy.get('#ContentSite_lblProductDsName').should('have.text', 'Orquídea Azul');
-        cy.get('.preco_prod > .precoPor_prod').should('have.text', '\n                        R$ 266,31');
+        cy.get('.preco_prod > .precoPor_prod').should('contain', 'R$ 266,31');
         
     })
 })
